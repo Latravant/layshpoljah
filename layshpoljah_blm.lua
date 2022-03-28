@@ -219,14 +219,14 @@ function init_gear_sets()
     -- Idle sets
     
     -- Normal refresh idle set
-    sets.idle = {    main="Owleyes",
+    sets.idle = {    main="Mafic Cudgel",
 		sub="Genmei Shield",
 		ammo="Staunch Tathlum",
 		head="Befouled Crown",
 		body="Shamash Robe",
 		hands="Serpentes Cuffs",
 		legs="Miasmic Pants",
-		feet="Serpentes Sabots",
+		feet="crier's gaiters",
 		neck="Chrys. Torque",
 		waist="Witful Belt",
 		left_ear="ethereal earring",
@@ -249,7 +249,7 @@ function init_gear_sets()
 		left_ear="Colossus's Earring",
 		left_ring="Defending Ring",
 		right_ring="Chirich Ring",
-		back="Solemnity Cape",}
+		back="Solemnity Cape"}
 
     -- Idle mode scopes:
     -- Idle mode when weak.
@@ -259,10 +259,22 @@ function init_gear_sets()
         back="Umbra Cape",waist="Hierarch Belt",legs="Nares Trews",feet="Hagondes Sabots"}
     
     -- Town gear.
-    sets.idle.Town = set_combine(sets.idle, {feet="Herald's Gaiters"})
+    sets.idle.Town = set_combine(sets.idle, {feet="crier's Gaiters"})
         
-    -- Defense sets
-
+    sets.lowmp = set_combine(sets.idle, {
+		main={ name="Lathi", augments={'MP+80','INT+20','"Mag.Atk.Bns."+20',}},
+		sub="Mensch Strap +1",
+		head="Befouled Crown",
+		body="Shamash Robe",
+		hands="Serpentes Cuffs",
+		feet="Serpentes Sabots",
+		neck="Chrys. Torque",
+		waist="Fucho-no-Obi",
+		left_ear="Ethereal Earring",
+		right_ear={ name="Moonshade Earring", augments={'HP+25','Latent effect: "Refresh"+1',}}})
+		
+	-- Defense sets
+	
     sets.defense.PDT = sets.idle.PDT
 
     sets.defense.MDT = {ammo="Demonry Stone",
@@ -393,8 +405,8 @@ end
 
 -- Modify the default idle set after it was constructed.
 function customize_idle_set(idleSet)
-    if player.mpp < 51 then
-        idleSet = set_combine(idleSet, sets.latent_refresh)
+    if player.mpp < 91 then
+        idleSet = sets.lowmp
     end
     
     return idleSet
