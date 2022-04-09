@@ -317,6 +317,16 @@ function init_gear_sets()
 		back="Solemnity Cape",}
 end
 
+windower.register_event('Zone change', 
+function(new, old)
+	status_change(player.status)
+	send_command('gs c reset OffenseMode')
+	send_command('gs c reset IdleMode')
+	windower.add_to_chat(10,' *** Zoning Reset Mode *** ')
+	send_command('input /macro book 15; wait 1;input /macro set 1')
+	send_command('gs c update user')
+end)
+
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for standard casting events.
 -------------------------------------------------------------------------------------------------------------------
@@ -403,13 +413,21 @@ function job_get_spell_map(spell, default_spell_map)
     end
 end
 
+function customize_melee_set(meleeSet)
+    if player.mpp < 91 then
+        meleeSet = set_combine(meleeSet, sets.lowmp)
+    end
+    
+    return meleeSet
+end
+
 -- Modify the default idle set after it was constructed.
 function customize_idle_set(idleSet)
     if player.mpp < 91 then
-        idleSet = sets.lowmp
-    end
-    
-    return idleSet
+        idleSet = set_combine(idleSet, sets.lowmp)
+	end
+	
+	return idleSet
 end
 
 
