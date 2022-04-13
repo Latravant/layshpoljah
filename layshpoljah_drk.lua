@@ -437,19 +437,19 @@ function init_gear_sets()
     -- WEAPONSKILL SETS
     -- General sets
     sets.precast.WS = {
-        ammo="Knobkierrie",
-        head="Sakpata's Helm",
-        neck="Abyssal Bead Necklace +2",
-        ear1="Thrud Earring",
-        ear2="Moonshade Earring",
-        body="Ignominy Cuirass +3",
-        hands="Odyssean Gauntlets",
-        ring1="Niqmaddu Ring",
-        ring2="Regal Ring",
-        back=Ankou.WSD,
-        waist="Windbuffet Belt +1",
-        legs="Fallen's Flanchard +3",
-        feet="Sulevia's Leggings +2"
+            ammo="Aqreqaq Bomblet",
+		head={ name="Valorous Mask", augments={'Weapon skill damage +2%','Pet: AGI+8','Magic Damage +26','Accuracy+9 Attack+9','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},
+		body={ name="Valorous Mail", augments={'MND+8','DEX+8','Weapon skill damage +4%','Accuracy+14 Attack+14','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
+		hands={ name="Argosy Mufflers", augments={'STR+15','"Dbl.Atk."+2','Haste+2%',}},
+		legs="Sulevi. Cuisses +1",
+		feet="Sulev. Leggings +1",
+		neck="Lacono Neck. +1",
+		waist="Chuq'aba Belt",
+		left_ear="Thrud Earring",
+		right_ear="Psystorm Earring",
+		left_ring="Shiva Ring +1",
+		right_ring="Ifrit Ring",
+		back="Buquwik Cape",
     }
     sets.precast.WS.Mid = set_combine(sets.precast.WS, {
         legs="Fallen's Flanchard +3",
@@ -694,7 +694,7 @@ function init_gear_sets()
         ring2="Defending Ring",
         back=Ankou.STP,
         waist="Flume belt",
-        legs="Carmine Cuisses +1",
+        legs="Carmine Cuisses",
         feet="Volte Sollerets"
     }
     sets.idle.Town = set_combine(sets.idle, {
@@ -791,34 +791,35 @@ function init_gear_sets()
 
     -- Base set (global catch-all set)
     sets.engaged = {
-        -- sub="Bloodrain Strap",
-        ammo="Coiste Bodhar",
-        head="Flamma Zucchetto +2",
-        neck="Abyssal Bead Necklace +2",
-        ear1="Cessance Earring",
-        ear2="Brutal Earring",
-        --body=Valorous.Body.STP,
-        body="Sakpata's Plate",
-        hands="Sakpata's Gauntlets",
-        ring1="Niqmaddu Ring",
-        ring2="Petrov Ring",
-        back=Ankou.DA,
-        waist="Sailfi Belt +1",
-        legs="Ignominy Flanchard +3",
-        feet="Flamma Gambieras +2"
-    }
+		ammo="Focal Orb",
+		head="Odyssean Helm",
+		body={ name="Valorous Mail", augments={'MND+8','DEX+8','Weapon skill damage +4%','Accuracy+14 Attack+14','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
+		hands={ name="Argosy Mufflers", augments={'STR+15','"Dbl.Atk."+2','Haste+2%',}},
+		legs={ name="Argosy Breeches", augments={'STR+10','Attack+20','"Store TP"+5',}},
+		feet={ name="Argosy Sollerets", augments={'HP+50','"Dbl.Atk."+2','"Store TP"+3',}},
+		neck="Asperity Necklace",
+		waist="Dynamic Belt +1",
+		left_ear="Brutal Earring",
+		right_ear="Mache Earring",
+		right_ring="Chirich Ring",
+		back="Atheling Mantle",    }
+	
     sets.engaged.Mid = set_combine(sets.engaged, {
         ear2="Telos Earring",
         waist="Ioskeha Belt",
         ring2="Regal Ring",
     })
     sets.engaged.Acc = set_combine(sets.engaged.Mid, {
-        ammo="Ginsen",
-        -- ammo="Hasty Pinion +1",
-        ear1="Cessance Earring",
-        ear2="Telos Earring",
-        waist="Ioskeha Belt",
-        back=Ankou.STP,
+        ammo="Hasty Pinion +1",
+		head="Sulevia's Mask +1",
+		body="Hjarrandi Breast.",
+		hands="Sulev. Gauntlets +1",
+		legs="Sulevi. Cuisses +1",
+		feet="Sulev. Leggings +1",
+		neck="Sanctity Necklace",
+		waist="Dynamic Belt +1",
+		left_ear="Steelflash Earring",
+		right_ear="Bladeborn Earring",
     })
 
     -- These only apply when delay is capped.
