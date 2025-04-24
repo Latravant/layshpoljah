@@ -384,8 +384,6 @@ function init_gear_sets()
 		back="Moonlight Cape",waist="Flume Belt +1",legs="Malignance Tights",feet="Battlecast Gaiters"}
 		
 
-optional_include(player.name..'_'..player.main_job..'_'..player.sub_job..'_Gear.lua')
-
 end
 
 -- Select default macro book on initial load or subjob change.
@@ -398,5 +396,5 @@ function select_default_macro_book()
 	end
 end
 
-
+optional_include(player.name..'_'..player.main_job..'_'..player.sub_job..'_Gear.lua')
 autows_list = {['Naegling']='Savage Blade',}
