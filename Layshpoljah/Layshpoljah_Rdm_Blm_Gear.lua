@@ -1,4 +1,4 @@
-function user_job_setup()
+function job_setup()
 	-- Options: Override default values
     state.OffenseMode:options('Normal')
     state.HybridMode:options('Normal','DT')
@@ -22,7 +22,6 @@ function user_job_setup()
 	send_command('gs c enable all')	
 	send_command('wait 2; input /lockstyleset 1')
 	
-
 end
 
 function user_unload()
@@ -320,8 +319,6 @@ function init_gear_sets()
 		right_ear="Sherida Earring",left_ring="Defending Ring",right_ring="Chirich Ring",}
 		
 		
-optional_include(player.name..'_'..player.main_job..'_'..player.sub_job..'_Gear.lua')
-
 end
 
 -- Select default macro book on initial load or subjob change.
