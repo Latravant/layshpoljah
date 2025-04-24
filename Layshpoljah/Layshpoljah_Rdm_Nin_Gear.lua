@@ -23,7 +23,6 @@ function user_job_setup()
 	send_command('gs c enable all')	
 	send_command('wait 2; input /lockstyleset 1')
 	
-
 end
 
 function user_unload()
@@ -274,7 +273,6 @@ function init_gear_sets()
 		neck="Asperity Necklace",waist="Sailfi Belt +1",left_ear="Telos Earring",
 		right_ear="Eabani Earring",left_ring="Pernicious Ring",right_ring="Hetairoi Ring",})
 		
-optional_include(player.name..'_'..player.main_job..'_'..player.sub_job..'_Gear.lua')
 
 end
 
