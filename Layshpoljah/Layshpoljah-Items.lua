@@ -1,7 +1,6 @@
 --Gearsets your character will use among multiple jobs.
 sets.Sheltered = {ring2="Sheltered Ring"}
 sets.Capacity = {back="Mecisto. Mantle"}
-
 sets.buff.Doom = {neck="Nicander's Necklace",waist="Gishdubar Sash",ring1="Eshmun's Ring",ring2="Eshmun's Ring"}
 sets.TreasureHunter = {ammo="perfect lucky egg",hands="volte bracers",waist="Chaac Belt",legs="volte brais"}
 
@@ -9,6 +8,7 @@ sets.precast.Item['Hallowed Water'] = {}
 sets.precast.Item['Holy Water'] = {}
 
 --Augmented items that you'll use among multiple jobs.
+organizer_items = {}
 
 gear.gada_enhancing_club = {name="Gada",augments={'Enh. Mag. eff. dur. +6','STR+3','Mag. Acc.+8','"Mag.Atk.Bns."+17','DMG:+7',}}
 gear.gada_healing_club = {name="Gada",augments={'"Cure" potency +9%','Mag. Acc.+11','"Mag.Atk.Bns."+13','DMG:+3',}}
