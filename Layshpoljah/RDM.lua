@@ -48,8 +48,8 @@ function get_sets()
     -- Load and initialize the include file.
     include('Sel-Include.lua')
     include('organizer-lib')		
-	send_command('lua l CurePlease_addon')
 end
+
 
 function file_unload()
 	send_command('lua u CurePlease_addon')
@@ -293,8 +293,8 @@ function job_customize_idle_set(idleSet)
 
     if state.IdleMode.value == 'Normal' or state.IdleMode.value:contains('Sphere') then
 		if player.mpp < 90 then
-			if sets.lowMP then
-				idleSet = sets.lowMP
+			if sets.idle.lowMP then
+				idleSet = sets.idle.lowMP
 			end
 			
 			if (state.Weapons.value == 'None' or state.UnlockWeapons.value) and idleSet.main then
@@ -623,7 +623,6 @@ function update_melee_groups()
 		classes.CustomMeleeGroups:append('AM')
 	end	
 end
-
 
 buff_spell_lists = {
 	Auto = {--Options for When are: Always, Engaged, Idle, OutOfCombat, Combat
